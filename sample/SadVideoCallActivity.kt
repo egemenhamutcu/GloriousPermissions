@@ -60,7 +60,7 @@ class SadVideoCallActivity: AppCompatActivity() {
         }
     }
     
-    private fun showPermissionPermanentDenialDialog(activity: Activity, deniedPermissions: ArrayList<String>) {
+    private fun showPermissionPermanentDenialDialog(activity: Activity) {
         if (!activity.isFinishing) {
             AlertDialog.Builder(activity)
                     .setTitle(R.string.permission_title_application)
@@ -102,7 +102,7 @@ class SadVideoCallActivity: AppCompatActivity() {
             if (shouldShowRationale) {
                 showPermissionRationaleDialog(activity)
             } else {
-                showPermissionPermanentDenialDialog(activity, deniedPermissions)
+                showPermissionPermanentDenialDialog(activity)
             }
         }
     }
