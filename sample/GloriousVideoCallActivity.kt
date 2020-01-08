@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.ehamutcu.gloriouspermissions.ui.PermissionActivity
 import com.ehamutcu.gloriouspermissions.sample.permission.BusinessRequest
 
-class VideoCallActivity: PermissionActivity() {
+class GloriousVideoCallActivity: PermissionActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
