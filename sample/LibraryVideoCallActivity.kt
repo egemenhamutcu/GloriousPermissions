@@ -84,32 +84,6 @@ class LibraryVideoCallActivity: AppCompatActivity() {
                     .show()
         }
     }
- 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        val deniedPermissions = ArrayList<String>()
-        var areAllPermissionsGranted = true
-        grantResults.indices.forEach { i ->
-            val grantResult = grantResults[i]
-            if (grantResult == PackageManager.PERMISSION_DENIED) {
-                areAllPermissionsGranted = false
-                deniedPermissions.add(permissions[i])
-            }
-        }
-
-        if (areAllPermissionsGranted) {
-            makeVideoCall()
-        } else {
-            val shouldShowRationale = deniedPermissions.any { deniedPermission ->
-                ActivityCompat.shouldShowRequestPermissionRationale(activity, deniedPermission)
-            }
-
-            if (shouldShowRationale) {
-                showPermissionRationaleDialog(activity)
-            } else {
-                showPermissionPermanentDenialDialog(activity)
-            }
-        }
-    }
     
     override fun onResume() {
         super.onResume()f
