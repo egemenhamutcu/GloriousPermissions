@@ -1,7 +1,7 @@
 # GloriousPermissions
 Android M system permissions pattern making it manageable, readable and reusable
 
-## Attetion!
+## Attention!
 This is not an Android project and will not be builded. It is an example that demonstrates **GloriousPermissions** pattern. You can find more explanation about the pattern in my medium article below:
 
 
